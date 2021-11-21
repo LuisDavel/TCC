@@ -13,14 +13,6 @@ function msg (msg){
 }
 
 
-/*function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-  }*/
-
 function random() {
         result_final = 0;
         a = 0;
@@ -58,13 +50,6 @@ function random() {
         }
         document.getElementById("result" + i).innerHTML = y;
     }
-    
-    result_final = a + ((b/2) * c)
-    
-    //msg('Result Final ' + result_final)
-
-    //document.getElementById('result_final').innerHTML = result_final
-    
 }
 
 
@@ -76,10 +61,10 @@ function random_dev(){
 
         operador_random = Math.floor((Math.random() * 2) + 1);
 
-        msg('FOR ' + i)
+       // msg('FOR ' + i)
        
        
-        msg('Random: ' + operador_random);
+      //  msg('Random: ' + operador_random);
 
         if(i == 1){
             if(operador_random == 1){
@@ -114,7 +99,7 @@ function random_dev(){
    
     if(result_final < 0){
         msg('Resultado errado: ' + result_final)
-        result_final= result_final * -1;
+        result_final = result_final * -1;
     }
 
     
@@ -123,14 +108,6 @@ function random_dev(){
     
     msg('Resultado final: ' + result_final)
 }
-
-var temporiza;
-$("#valor").on("input", function(){
-   clearTimeout(temporiza);
-   temporiza = setTimeout(function(){
-        resultado(); // FUNçÃO A SER DISPARADA
-   }, 1000);
-});
 
 function resultado(){
     
@@ -144,7 +121,8 @@ function resultado(){
                 msg('Acertos + ' + conta_acerto)
                 msg('-----------------------')
                 random();
-                msg(tentativa)
+                random_dev();
+                msg(tentativa);
             }else if(result_final != valor){
                 tentativa += 1;
                 alert(valor);
@@ -152,15 +130,52 @@ function resultado(){
                 msg('Erros + ' + conta_erro)
                 msg('-----------------------')
                 random();
+                random_dev();
                 msg(tentativa)
             }
           
         }else{
             msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro)
-            if(conta_acerto > 3){
-                
-
-            }
+           
+            
         }
     }
+    
+}
+
+function resultado_final(){
+   // abreVideo();
+    if(tentativa != 5){
+        resultado();
+    }else if(tentativa == 5){
+        alert('Chupa cu')
+        if(conta_acerto > 3 && conta_acerto < 5){
+            result_value = document.getElementById("id_result");
+            result_value.setAttribute("value", 6)  ;
+            abreVideo();
+
+        }else if( conta_acerto < 3  ){
+            alert('vai fazer dnv');
+            location.reload();
+
+        }else if(conta_acerto == 5 ){
+            result_value = document.getElementById("id_result");
+            result_value.setAttribute("value", 10) ;    
+            
+        }
+
+    }        
+}
+
+function abreVideo() {
+    document.getElementById('id01').style.display='block';
+    video.autoplay = true;
+    video.load();
+}
+
+function fecharVideo() {
+    document.getElementById('id01').style.display='none';
+    video.autoplay= false;
+    video.load();
+    location.reload();
 }
