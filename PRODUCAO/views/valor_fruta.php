@@ -12,6 +12,28 @@
     <div class="img">
         <div class="container">
             <div class="corpo">
+
+                <div id="id01" class="modal">
+
+                <!-- Modal content -->
+                    <div class="modal-content">
+
+                        <div class="close" onclick="fecharVideo()" >&times; Refazer</div><br><br>
+                        
+                        <br>
+                        <form action="">
+                            <input type="submit" class="close" value="Avançar">
+                            <input type="hidden"  value="" name="resultado" id="id_result"  readonly>
+                        </form>
+                        <br>
+                        <div>
+                           <video id="video" width="900" height="800" controls="controls">
+                           <source src="../img/vide_conclusao.mp4" type="video/mp4">
+                        </div>
+                    </div>
+                   
+                </div>
+
                 <table>
                     <tr>
                         <td id="numero1"><img src="../img/melancia.png" alt="Melancia"></td>
@@ -33,16 +55,19 @@
                         <td id="numero3"><img src="../img/morango.png" alt="Morango"></td>
                         <td>=</td>
                         <td id="result3">Valor não calculado</td>
-                     </tr> 
-                     <tr>
+                    </tr> 
+                    <tr>
                         <td><img src="../img/melancia.png" alt="Melancia"></td>
                         <td id="muda1">+</td>
                         <td><img src="../img/Cereja-dupla.png" alt="Cereja"></td>
                         <td id="muda2">*</td>
                         <td><img src="../img/morango.png" alt="Morango"></td>
                         <td>=</td>
-                        <td>&nbsp; &nbsp; &nbsp; <input id="valor" type="text" placeholder="Qual sera o resultado ?"><input type="submit" value="Validar" onclick="recebe_valor()"> </td>
-                     </tr> 
+                        <form action="#">
+                            <td>&nbsp; &nbsp; &nbsp; <input id="valor" type="text" placeholder="Qual sera o resultado ?"> <input type="submit" value="Validar" onclick="resultado_final()"> </td>
+                            
+                        </form>
+                    </tr> 
                 </table>
             </div>
         </div>    
