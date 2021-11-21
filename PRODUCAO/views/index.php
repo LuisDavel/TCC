@@ -83,10 +83,13 @@
                 
 <?php   
         }
-        //cu 
-?>            
-                    <p><?php echo($_SESSION['nome_heroi']); ?></p><br>
-                    <p><?php echo($_SESSION['id']); ?></p>
+        //cu  init
+?>                  <div>
+                      <p class="p1">Nome de heroi:</p>
+                      <p><?php echo($_SESSION['nome_heroi']); ?> &nbsp; 
+                      <p class="p1"> Codigo:</p>
+                      <p> <?php echo($_SESSION['id']); ?></p>
+                    </div>
                 </div>
 
                 <div class="div2">

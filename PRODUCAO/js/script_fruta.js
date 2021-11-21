@@ -157,6 +157,10 @@ function resultado(){
           
         }else{
             msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro)
+            if(conta_acerto > 3){
+                
+
+            }
         }
     }
 }
