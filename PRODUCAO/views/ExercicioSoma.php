@@ -1,43 +1,64 @@
-<?php
-	include('../verifica_login.php');
-?>
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-<?php
-	    include('../conexao.php');
-?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../css/soma.css">
     <title>Cadastro</title>
 </head>
 <body>
-    <div id="fundo_background">
+    <div class="fundo_background">
         <div class="container">
 
             <div class="conteudo">
                 <div class="content_pergunta">
+                    <div id="id01" class="modal">
+                        <div class="modal-content">
+
+                            <div class="close" onclick="fecharVideo()" >&times; Refazer</div><br><br>
+
+                            <br>
+                            <!-- imput do Hidden Resultado  -->
+                            <form action="../includes/valor_fruta_db.php" method="POST">
+                                <input type="submit" class="close" value="Avançar">
+                                <input type="hidden"  value="" name="nota" id="id_result"  readonly>
+                                <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                                <input type="hidden"  value="exercicio_fruta" name="exercicio_fruta" id="exercicio"  readonly>
+                                <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                                <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly>
+                            </form>
+                            <br>
+                            <div>
+                               <video id="video" width="900" height="800" controls="controls">
+                               <source src="../img/vide_conclusao.mp4" type="video/mp4">
+                            </div>
+                        </div>
+
+                    </div>
 
                     <table>
                         <tr>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
+                           <td id="result1">3</td>
+                           <td id="result2">3</td>
+                           <td id="result3">3</td>
                         </tr>
                         <tr>
-                           <td>3</td>
-                           <td>4</td>
-                           <td>5</td>
+                           <td id="result4">3</td>
+                           <td id="result5">3</td>
+                           <td id="result6">3</td>
                         </tr> 
                         <tr>
-                            <th>6</th>  
-                            <th>12</th>
-                            <th> </th>
-                            <th><inpt id="valor" type="text" placeholder="Resultado" onchange="resultado()"> </th>
+                          <td id="result7">3</td>
+                           <td id="result8">3</td>
+                           <td id="result"></td>
                         </tr>
+                        
                     </table>
+                    
+                </div>
+                <div>
+                    <input id="valor" type="text" placeholder="Resultado" onchange="resultado()"> <input type="submit" value="Validar" onclick="recebe_valor()"> 
                 </div>
             </div>
         </div>
@@ -45,19 +66,5 @@
 </body>
 </html>
 
+<script src="../js/script_soma.js" defer></script>
 
-
-<script>
-    function fatora(){
-       var b = (x + x1 + x2)
-      var acerto = document.getElementById("text").value;
-      console.log('Var função acerto: ' + acerto)
-      if(b == acerto ){
-        img.setAttribute('src', '../HOMOLOGA/img/heroi2.png')
-        console.log('Var da função random: ' + (x + x1 + x2) + ' igual a B = ' + b)
-        //document.getElementById("demo1").innerHTML = b
-  
-      }
-    }
-
-</script>

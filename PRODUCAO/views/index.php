@@ -44,7 +44,7 @@
             <a class="nav-link" href="#">Correções</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Perfil</a>
+            <a class="nav-link" href="#">Ranking</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.php?acao=sair">SAIR</a>
