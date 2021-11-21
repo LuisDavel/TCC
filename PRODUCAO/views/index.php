@@ -1,7 +1,11 @@
 <?php
 	    include('../conexao.php');
         include('../verifica_login.php');
-        echo($_SESSION['nome_heroi'])
+        $id = $_SESSION['id'];
+
+        $sql = "SELECT tp_heroi FROM USUARIO WHERE CD_USUARIO = " . $id;
+        $retorno = mysqli_query($con, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +46,33 @@
         <div class="container">
             <div class="barra_direita">
                 <div class="div">
-                     <div>
-                         <img src="../img/Rosto_heroi.png" alt="Heroi" style=" width: 700px;">
-                     </div>  
-                </div>   
-            
+<?php
+
+    while($item = mysqli_fetch_array($retorno, MYSQLI_ASSOC)) {
+     
+        if($item['tp_heroi'] == "F") {  
+                 
+?>
+
+                    <div>
+                         <img src="../img/Rosto_girls.png" alt="Girl" style="height: 1px; width: 90px;"><br>
+                    </div>    
+                      
+<?php
+        echo $item['tp_heroi'];
+        }else{
+
+?>
+                    <div>
+                         <img src="../img/Rosto_heroi.png" alt="Boy" style=" width: 90px;"><br>
+                    </div> 
+                
+<?php   
+        }
+?>            
+                    <p><?php echo($_SESSION['nome_heroi']); ?></p>
+                </div>
+
                 <div class="div2">
                     s
                 </div>
@@ -67,6 +93,10 @@
                
             </div>
         </div>
+
+ <?php
+    }
+ ?>
     </section>
     <!-- BODY fim -->
 
