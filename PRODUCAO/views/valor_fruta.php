@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <?php
+    include ('../conexao.php');
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +24,14 @@
                         <div class="close" onclick="fecharVideo()" >&times; Refazer</div><br><br>
                         
                         <br>
-                        <form action="">
+                        <!-- imput do Hidden Resultado  -->
+                        <form action="../includes/valor_fruta_db.php" method="POST">
                             <input type="submit" class="close" value="Avançar">
-                            <input type="hidden"  value="" name="resultado" id="id_result"  readonly>
+                            <input type="hidden"  value="" name="nota" id="id_result"  readonly>
+                            <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                            <input type="hidden"  value="exercicio_fruta" name="exercicio_fruta" id="exercicio"  readonly>
+                            <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                            <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly>
                         </form>
                         <br>
                         <div>
@@ -63,10 +71,10 @@
                         <td id="muda2">*</td>
                         <td><img src="../img/morango.png" alt="Morango"></td>
                         <td>=</td>
-                        <form action="#">
-                            <td>&nbsp; &nbsp; &nbsp; <input id="valor" type="text" placeholder="Qual sera o resultado ?"> <input type="submit" value="Validar" onclick="resultado_final()"> </td>
-                            
-                        </form>
+                        
+                        <td>&nbsp; &nbsp; &nbsp; <input id="valor" type="text" placeholder="Qual sera o resultado ?"> <input type="submit" value="Validar" onclick="resultado_final()"> </td>
+                        <td><button onclick="resultado_final()"> verifica </button></td>    
+                       
                     </tr> 
                 </table>
             </div>

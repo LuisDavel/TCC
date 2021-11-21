@@ -9,7 +9,7 @@
 	//echo('Não sei ?' . $nome_usuario);
 
 	$sql = "INSERT INTO usuario
-		VALUES (null,'null', '$nome_usuario' , 'null', 'null', 'null', 'null','A')";
+		VALUES (null,'null', '$nome_usuario' , 'null', '00/00/0000', 'null', 'N','A')";
 
     $query = mysqli_query($con, $sql);
 

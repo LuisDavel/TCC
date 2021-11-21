@@ -116,7 +116,7 @@ function resultado(){
         if(tentativa != 5){
             if(result_final == valor){
                 tentativa += 1;
-                alert(valor);
+            //    alert(valor);
                 conta_acerto =  conta_acerto + 1;
                 msg('Acertos + ' + conta_acerto)
                 msg('-----------------------')
@@ -125,7 +125,7 @@ function resultado(){
                 msg(tentativa);
             }else if(result_final != valor){
                 tentativa += 1;
-                alert(valor);
+            //    alert(valor);
                 conta_erro = conta_erro + 1;
                 msg('Erros + ' + conta_erro)
                 msg('-----------------------')
@@ -146,10 +146,12 @@ function resultado(){
 function resultado_final(){
    // abreVideo();
     if(tentativa != 5){
+        msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro);
         resultado();
     }else if(tentativa == 5){
-        alert('Chupa cu')
-        if(conta_acerto > 3 && conta_acerto < 5){
+        
+        if(conta_acerto >= 3 && conta_acerto < 5){
+            alert('Chupa cu');
             result_value = document.getElementById("id_result");
             result_value.setAttribute("value", 6)  ;
             abreVideo();
