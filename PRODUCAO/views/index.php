@@ -83,6 +83,7 @@
                 
 <?php   
         }
+        //cu 
 ?>            
                     <p><?php echo($_SESSION['nome_heroi']); ?></p><br>
                     <p><?php echo($_SESSION['id']); ?></p>
