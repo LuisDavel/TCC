@@ -9,12 +9,13 @@
     $id_usuario = $_POST['id_usuario'];
 	
     $sql = "INSERT INTO modulo
-    VALUES (null, '$id_usuario' , '$modulo', '$exercicio', '$validacao', '$nota')";
+    VALUES (null, '$id_usuario' , '$modulo', '$exercicio', 'N', '$nota')";
     
 	$query = mysqli_query($con, $sql);
+	//echo $sql;
 
-	if( mysqli_num_rows($query) == 1 ){
-		echo mysqli_query($con, $sql);
+	if( $query ){
+		header('Location: ../views/index.php?retorno=2');
 	}else{
 		echo mysqli_query($con, $sql);
 	}
