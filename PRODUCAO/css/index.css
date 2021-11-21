@@ -80,3 +80,8 @@ p {
     margin-left: 100px;
 }
 
+.insignias ul, li {
+    display: inline-block;
+    padding-right: 4px;
+    margin-left: 15px;
+}

@@ -59,6 +59,8 @@
         <div class="container">
             <div class="barra_direita">
                 <div class="div">
+                  
+                
 <?php
 
     while($item = mysqli_fetch_array($retorno, MYSQLI_ASSOC)) {
@@ -69,11 +71,11 @@
 ?>
 
                     <div>
-                         <img src="../img/Rosto_girls.png" alt="Girl" style="height: 1px; width: 90px;"><br>
+                         <img src="../img/Rosto_girls.png" alt="Girl" style=" width: 90px;"><br>
                     </div>    
                       
 <?php
-        echo $item['tp_heroi'];
+        
         }else{
 
 ?>
@@ -83,13 +85,26 @@
                 
 <?php   
         }
-        //cu  init
-?>                  <div>
+      
+?>                  
+                    <div class="paragrafo">
                       <p class="p1">Nome de heroi:</p>
                       <p><?php echo($_SESSION['nome_heroi']); ?> &nbsp; 
-                      <p class="p1"> Codigo:</p>
+                      <p class="p1"> Identificador:</p>
                       <p> <?php echo($_SESSION['id']); ?></p>
+                      <p class="p1">Conquistas</p>
+
+                      <div class="insignia">
+                        <ul>
+		                      <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+    	                    <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+                          <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+    	                    <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+	                      </ul>
+                      </div>
                     </div>
+
+                   
                 </div>
 
                 <div class="div2">
