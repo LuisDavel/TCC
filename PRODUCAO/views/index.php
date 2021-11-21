@@ -1,8 +1,18 @@
 <?php
 	    include('../conexao.php');
         include('../verifica_login.php');
+
+// VALIDA SESSÃO
+        if (@$_SESSION['id'] == "") {
+            header("Location:login.php");
+        }
+
+
+// SALVA DADO DO ID DE QM LOGOU
         $id = $_SESSION['id'];
 
+
+// SELECT PARA VERIFICAR O TIPO DE HEROI ESCOLHIDO        
         $sql = "SELECT tp_heroi FROM USUARIO WHERE CD_USUARIO = " . $id;
         $retorno = mysqli_query($con, $sql);
 
@@ -36,6 +46,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Perfil</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php?acao=sair">SAIR</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -49,7 +62,8 @@
 <?php
 
     while($item = mysqli_fetch_array($retorno, MYSQLI_ASSOC)) {
-     
+        
+ //IDENTIFICA O HEROI ESCOLHIDO      
         if($item['tp_heroi'] == "F") {  
                  
 ?>
@@ -70,7 +84,8 @@
 <?php   
         }
 ?>            
-                    <p><?php echo($_SESSION['nome_heroi']); ?></p>
+                    <p><?php echo($_SESSION['nome_heroi']); ?></p><br>
+                    <p><?php echo($_SESSION['id']); ?></p>
                 </div>
 
                 <div class="div2">

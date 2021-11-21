@@ -3,6 +3,12 @@
 <head>
 <?php
 	    include('../conexao.php');
+
+        if (@$_GET['acao'] == "sair") {
+            session_destroy();
+        }
+
+       
 ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
