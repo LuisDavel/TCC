@@ -3,14 +3,13 @@
 ?>	
 <?php
 	$nota = $_POST['nota'];
-	$validacao = $_POST['valida_exercicio'];
     $id_usuario = $_POST['id_usuario'];
 	
     $sql = "INSERT INTO modulo
-    VALUES (null, '$id_usuario' , '1', 'exercicio_fruta', 'N', '$nota')";
+    VALUES (null, '$id_usuario' , '1', 'exercicio_soma', 'N', '$nota')";
     
 	$query = mysqli_query($con, $sql);
-	//echo $sql;
+	//echo $sql;''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 	if( $query ){
 		header('Location: ../views/index.php?retorno=2');
