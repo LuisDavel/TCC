@@ -12,7 +12,6 @@
         <div class="container">
 
             <div class="conteudo">
-                <div class="content_pergunta">
                     <div id="id01" class="modal">
                         <div class="modal-content">
 
@@ -30,12 +29,14 @@
                             </form>
                             <br>
                             <div>
-                               <video id="video" width="900" height="800" controls="controls">
+                               <video id="video" width="900" height="800">
                                <source src="../img/vide_conclusao.mp4" type="video/mp4">
                             </div>
                         </div>
 
                     </div>
+                <div class="content_pergunta">
+                    
 
                     <table>
                         <tr>
@@ -58,7 +59,7 @@
                     
                 </div>
                 <div>
-                    <input id="valor" type="text" placeholder="Resultado" onchange="resultado()"> <input type="submit" value="Validar" onclick="recebe_valor()"> 
+                    <input id="valor" type="text" placeholder="Resultado"> <input type="submit" value="Validar" onclick="resultado()"> 
                 </div>
             </div>
         </div>

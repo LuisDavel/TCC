@@ -35,7 +35,7 @@
                         </form>
                         <br>
                         <div>
-                           <video id="video" width="900" height="800" controls="controls">
+                           <video id="video" width="900" height="800">
                            <source src="../img/vide_conclusao.mp4" type="video/mp4">
                         </div>
                     </div>

@@ -3,6 +3,10 @@ window.addEventListener('load', (event) => {
 });
 
 
+function msg (msg){
+    console.log ('=>:  ' + msg)
+}
+
 var conta_erro = 0;
 var conta_acerto = 0;
 var tentativa = 0;
@@ -25,36 +29,36 @@ function random() {
         //console.log(x)
         
         if(i == 1){
-            y =   'Luis 1 ' + x;
+            y =    x;
             a = x;
             //msg('If' + i +' ' + a) 
 
         }else if(i == 2){
 
-            var y =   'Luis 2 ' + x;
+            var y =    x;
             b = x;
             //msg('If' + i +' ' + b)  
         }else if(i == 3){
-            var y =   'Luis 3 ' + x;
+            var y =   x;
         
             c = x;
             //msg('If' + i +' ' + c)  
         }else if(i == 4){
-            var y =   'Luis 1 ' + x;
+            var y =    x;
             
             d = x;
             //msg('If' + i +' ' + c)  
         }else if(i == 5){
-            var y = 'Luis 2 ' + x;
+            var y =  x;
           
 
             e = x;
             //msg('If' + i +' ' + c)  
         }else if(i == 6){
-            var y =  'Luis 3 ' + x;
+            var y =   x;
     
             f = x;
-            console.log(y + ' 6 ')  
+            //console.log(y + ' 6 ')  
         }else if(i == 7){
             var y =  a + d;
            
@@ -79,13 +83,13 @@ function random() {
 
 
 function resultado(){
-    
+    abreVideo();
     var valor =  document.getElementById('valor').value;
     if(valor != ''){
         if(tentativa != 5){
             if(result_final == valor){
                 tentativa += 1;
-                alert(valor);
+               // alert(valor);
                 conta_acerto =  conta_acerto + 1;
                 msg('Acertos + ' + conta_acerto)
                 msg('-----------------------')
@@ -93,7 +97,7 @@ function resultado(){
                 msg(tentativa)
             }else if(result_final != valor){
                 tentativa += 1;
-                alert(valor);
+              //  alert(valor);
                 conta_erro = conta_erro + 1;
                 msg('Erros + ' + conta_erro)
                 msg('-----------------------')
@@ -103,6 +107,37 @@ function resultado(){
           
         }else{
             msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro)
+            if(tentativa == 5){
+                if(conta_acerto >= 3 && conta_acerto < 5){
+                    //alert('Chupa cu');
+                    result_value = document.getElementById("id_result");
+                    result_value.setAttribute("value", 6)  ;
+                    abreVideo();
+        
+                }else if( conta_acerto < 3  ){
+                    alert('vai fazer dnv');
+                    location.reload();
+        
+                }else if(conta_acerto == 5 ){
+                    result_value = document.getElementById("id_result");
+                    result_value.setAttribute("value", 10) ;    
+                    
+                }
+        
+            }        
         }
     }
+}
+
+function abreVideo() {
+    document.getElementById('id01').style.display='block';
+    video.autoplay = true;
+    video.load();
+}
+
+function fecharVideo() {
+    document.getElementById('id01').style.display='none';
+    video.autoplay= false;
+    video.load();
+    location.reload();
 }
