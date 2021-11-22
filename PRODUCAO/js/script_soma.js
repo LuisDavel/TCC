@@ -83,12 +83,15 @@ function random() {
 
 
 function resultado(){
-    abreVideo();
+  
+    //abreVideo();
+    var tentativa_text = document.getElementById('paragrafo_tentativa');
     var valor =  document.getElementById('valor').value;
     if(valor != ''){
         if(tentativa != 5){
             if(result_final == valor){
                 tentativa += 1;
+                tentativa_text.innerText = tentativa + " / 5"
                // alert(valor);
                 conta_acerto =  conta_acerto + 1;
                 msg('Acertos + ' + conta_acerto)
@@ -97,6 +100,7 @@ function resultado(){
                 msg(tentativa)
             }else if(result_final != valor){
                 tentativa += 1;
+                tentativa_text.innerText = tentativa + " / 5"
               //  alert(valor);
                 conta_erro = conta_erro + 1;
                 msg('Erros + ' + conta_erro)
@@ -104,7 +108,7 @@ function resultado(){
                 random();
                 msg(tentativa)
             }
-          
+            document.getElementById("valor").value = "";
         }else{
             msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro)
             if(tentativa == 5){
@@ -115,8 +119,17 @@ function resultado(){
                     abreVideo();
         
                 }else if( conta_acerto < 3  ){
-                    alert('vai fazer dnv');
-                    location.reload();
+                    //alert('vai fazer dnv');
+                    
+                    video_link = document.querySelector("#video_link");
+                    btt = document.querySelector("#btt_valida");
+
+                    video_link.setAttribute('src', '../img/errei.mp4');
+                    btt.setAttribute('type', 'hidden');
+
+
+                    abreVideo();
+                    //location.reload();
         
                 }else if(conta_acerto == 5 ){
                     result_value = document.getElementById("id_result");

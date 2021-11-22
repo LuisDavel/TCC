@@ -109,3 +109,11 @@ input[type=submit] {
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  .p3{
+    margin-right: 40px;
+    color: white;
+    font-size: 20px;
+
+  }

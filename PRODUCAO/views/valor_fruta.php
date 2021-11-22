@@ -13,7 +13,14 @@
 </head>
 <body>
     <div class="img">
+        
         <div class="container">
+            <div>
+                <a href="index.php"><input type="submit" value="voltar"></a>
+                <p>&nbsp</p>
+                <p class="p3">Tentativas</p>
+                <p class="p3" id="paragrafo_tentativa">0 / 5</p>
+            </div>
             <div class="corpo">
 
                 <div id="id01" class="modal">
@@ -21,22 +28,22 @@
                 <!-- Modal content -->
                     <div class="modal-content">
 
-                        <div class="close" onclick="fecharVideo()" >&times; Refazer</div><br><br>
-                        
                         <br>
                         <!-- imput do Hidden Resultado  -->
                         <form action="../includes/valor_fruta_db.php" method="POST">
-                            <input type="submit" class="close" value="Avançar">
-                            <input type="hidden"  value="" name="nota" id="id_result"  readonly>
-                            <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
-                            <input type="hidden"  value="exercicio_fruta" name="exercicio_fruta" id="exercicio"  readonly>
-                            <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
-                            <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly>
-                        </form>
+                                <input type="submit" id="btt_valida" class="close" value="Avançar">
+                                <input type="hidden"  value="" name="nota" id="id_result"  readonly>
+                                <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                                <input type="hidden"  value="exercicio_fruta" name="exercicio_fruta" id="exercicio"  readonly>
+                                <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                                <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
+                        </form>        
+                        <input type="submit" value="Refazer" onclick="fecharVideo()" >
                         <br>
                         <div>
+                     
                            <video id="video" width="900" height="800">
-                           <source src="../img/vide_conclusao.mp4" type="video/mp4">
+                           <source id="video_link" src="../img/vide_conclusao.mp4" type="video/mp4">
                         </div>
                     </div>
                    
@@ -72,8 +79,7 @@
                         <td><img src="../img/morango.png" alt="Morango"></td>
                         <td>=</td>
                         
-                        <td>&nbsp; &nbsp; &nbsp; <input id="valor" type="text" placeholder="Qual sera o resultado ?"> <input type="submit" value="Validar" onclick="resultado_final()"> </td>
-                        <td><button onclick="resultado_final()"> verifica </button></td>    
+                        <td>&nbsp; &nbsp; &nbsp; <input id="valor" type="text" placeholder="Qual sera o resultado ?"> <input type="submit" value="Validar" onclick="resultado()"> </td>
                        
                     </tr> 
                 </table>
