@@ -16,7 +16,7 @@
         
         <div class="container">
             <div>
-                <a href="index.php"><input type="submit" value="voltar"></a>
+                <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
                 <p>&nbsp</p>
                 <p class="p3">Tentativas</p>
                 <p class="p3" id="paragrafo_tentativa">0 / 5</p>

@@ -102,10 +102,6 @@ function random_dev(){
         result_final = result_final * -1;
     }
 
-    
-    
-
-    
     msg('Resultado final: ' + result_final)
 }
 

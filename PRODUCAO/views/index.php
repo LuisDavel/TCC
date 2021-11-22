@@ -108,18 +108,23 @@
                 </div>
 
                 <div class="div2">
-                    s
+                    sa
                 </div>
             </div> 
             <br>  
+
             <div class="barra_modulos">
                 <br>
-                <div class="card" style="background: rgb(131,58,180);
+
+                <a href="exercicios_modulo1.php"><div class="card" style="background: rgb(131,58,180);
                                          background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);">
                     <p> Modulo 1 </p>                             
-                </div>
+                </div></a>
                 <br>
-                <div class="card" style="background: rgb(246,254,16);
+<?php
+            /// IF Q VALIDA A PONTUAÇÃO PARA LIBERA O MODULO
+?>                
+                <a href="exercicios_modulo1.php"><div class="card" style="background: rgb(246,254,16);
                                          background: linear-gradient(90deg, rgba(246,254,16,1) 0%, rgba(224,91,22,1) 50%, rgba(255,128,128,1) 100%);">
                     <p> Modulo 2 </p>                            
                 </div>

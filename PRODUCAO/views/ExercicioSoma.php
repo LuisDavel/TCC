@@ -18,7 +18,7 @@
         
         <div class="container">
             <div>
-                <a href="index.php"><input type="submit" value="voltar"></a>
+                <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
                 <p>&nbsp</p>
                 <p class="p3">Tentativas</p>
                 <p class="p3" id="paragrafo_tentativa">0 / 5</p>
@@ -54,7 +54,7 @@
                         <div class="modal-content2">
                           <span class="close2">&times;</span>
                           <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-                          <p class="p1"> Para um primeiro teste, temos essa somatoria, encontre a lógica na vertical, talvez ajude em algo ... TAMBÉM temos 5 tentativas então VOCÊ CONSEGUE!!! </p><br>
+                          <p class="p1"> Para um primeiro teste temos essa somatoria, é importante encontrar a lógica na vertical, talvez isso ajude em algo ... TAMBÉM temos 5 tentativas então VOCÊ CONSEGUE!!! </p><br>
                         
                         </div>
 
