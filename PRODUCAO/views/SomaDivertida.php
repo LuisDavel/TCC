@@ -18,6 +18,10 @@
 <body> 
     <div class="img"> 
         <div class="container">
+                <div>
+                    <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
+                    <p>&nbsp</p>
+                </div>
 
                     <div id="id01" class="modal">
                         <div class="modal-content">

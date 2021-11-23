@@ -91,3 +91,18 @@ a{
     color: green;
     
 }
+
+.progress-barr{
+  
+    height: 10px;
+    padding: 2px;
+    background-color: black;
+    display: flex;
+  }
+  
+  .progress-barr::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+    transition: all 0.2s ease;
+  }

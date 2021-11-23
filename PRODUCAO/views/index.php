@@ -43,10 +43,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Correções</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ranking</a>
-          </li>
-          <li class="nav-item">
+                    <li class="nav-item">
             <a class="nav-link" href="login.php?acao=sair">SAIR</a>
           </li>
         </ul>
@@ -87,6 +84,7 @@
         }
       
 ?>                  
+
                     <div class="paragrafo">
                       <p class="p1">Nome de heroi:</p>
                       <p><?php echo($_SESSION['nome_heroi']); ?> &nbsp; 
@@ -108,7 +106,22 @@
                 </div>
 
                 <div class="div2">
-                    sa
+                  <p class="p1">Rankings</p>
+                  <table >
+                    <td>
+                        <tr><?php echo($_SESSION['nome_heroi']); ?></tr>
+                        <tr><div class="progress-barr" style="--progress: 20;"></div></tr>
+                    </td>
+                    <td>
+                        <tr>Nicolas</tr>
+                        <tr><div class="progress-barr" style="--progress: 20;"></div></tr>
+                    </td>
+
+
+                  </table>
+                  
+
+
                 </div>
             </div> 
             <br>  

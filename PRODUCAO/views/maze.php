@@ -12,6 +12,10 @@
 <body>
   <div class="img">  
     <div class="container">
+      <div>
+          <a href="exercicios_modulo2.php"><input type="submit" value="voltar"></a>
+          <p>&nbsp</p>
+      </div>
 
       <div id="options" style="opacity: 0%;">
         <select id="difficulty">
@@ -26,8 +30,8 @@
            <div id="startDiv" >
                <button id="start"> 
                 <div></div> 
-                  <div class="keys">Me ajude a chegar ao destino</div> 
-                  <div class="keys">Use comandos como: "Frente","Direita"</div> 
+                  <div class="keys">Aperte ENTER para começar</div> 
+                  <div class="keys">Leia o trecho a esquerda --></div> 
                 </button> 
            </div> 
 

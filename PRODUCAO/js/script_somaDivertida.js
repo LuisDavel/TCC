@@ -162,28 +162,20 @@ $(".dropzone").on("input", function(){
  var valor = 0;
 
 function resultado(){
-    
+    msg(soma_final);
+    msg(valor);
     if(soma_final == (result_final/2)){
+
         valor = result_final
-        msg(valor)
+        msg(valor);
+       
+        msg((result_final/2));
         
     }
 
     if(soma_final != (result_final/2)){
-        valor = 0
-        msg(valor)
-       
-    }
-
-    //abreVideo();
-    if(valor != ''){
-        if(valor == result_final){
-            result_value = document.getElementById("id_result");
-            result_value.setAttribute("value", 10)  ;
-            abreVideo();
-        } 
-        
-        if(valor == 0){
+        valor = 2;
+        if(valor != ''){
             video_link = document.querySelector("#video_link");
             btt = document.querySelector("#btt_valida");
 
@@ -193,7 +185,16 @@ function resultado(){
 
             abreVideo();
         }
-    
+       
+    }
+
+    //abreVideo();
+    if(valor != ''){
+        if(valor == result_final){
+            result_value = document.getElementById("id_result");
+            result_value.setAttribute("value", 10)  ;
+            abreVideo();
+        }     
     }
 }
 
