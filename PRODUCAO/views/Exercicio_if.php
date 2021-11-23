@@ -29,11 +29,11 @@
         <!-- VIDEO -->
             
 
-            <div id="id01" class="modal">
+        <div id="id01" class="modal">
                 <div class="modal-content">
                     <br>
                     <!-- imput do Hidden Resultado  -->
-                    <form action="../includes/exercicio_soma_db.php" method="POST">
+                    <form action="../includes/exercicio_if_db.php" method="POST">
                         <input type="submit" id="btt_valida" class="close" value="Avançar">
                         <input type="hidden"  value="" name="nota" id="id_result"  readonly>
                         <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
@@ -41,7 +41,15 @@
                         <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
                         <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
                     </form>
-                    <input type="submit" value="Refazer" onclick="fecharVideo()" >
+                    <form action="../includes/exercicio_if_db.php" method="POST">
+                        <input type="hidden" value="Refazer" id="btt_refaz" onclick="fecharVideo()" >
+                        <input type="hidden"  value="" name="nota" id=""  readonly>
+                        <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                        <input type="hidden"  value="exercicio_soma" name="exercicio_soma" id="exercicio"  readonly>
+                        <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                        <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
+                    </form>              
+                    <input type="submit" value="Refazer" id="btt_refaz2" onclick="fecharVideo()" >     
                     <br>
                     <div>
                        <video id="video" width="900" height="800">

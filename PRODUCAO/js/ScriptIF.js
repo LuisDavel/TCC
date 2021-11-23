@@ -63,6 +63,10 @@ function log(message) {
             btt = document.querySelector("#btt_valida");
             result_value = document.getElementById("id_result");
             result_value.setAttribute("value", 0)  ;
+            btt_refaz = document.querySelector("#btt_refaz");
+            btt_refaz2 = document.querySelector("#btt_refaz2");
+            btt_refaz2.setAttribute('type', 'hidden');
+            btt_refaz.setAttribute('type', 'submit');
             video_link.setAttribute('src', '../img/errei.mp4');
             btt.setAttribute('type', 'hidden');
             abreVideo();

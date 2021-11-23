@@ -38,10 +38,17 @@
                                 <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
                                 <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
                         </form>        
-                        <input type="submit" value="Refazer" onclick="fecharVideo()" >
+                        <form action="../includes/valor_fruta_db.php" method="POST">
+                                <input type="submit" value="Refazer" onclick="fecharVideo()" >
+                                <input type="hidden"  value="" name="nota" id="id_result"  readonly>
+                                <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                                <input type="hidden"  value="exercicio_fruta" name="exercicio_fruta" id="exercicio"  readonly>
+                                <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                                <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
+                        </form> 
                         <br>
                         <div>
-                     
+            
                            <video id="video" width="900" height="800">
                            <source id="video_link" src="../img/vide_conclusao.mp4" type="video/mp4">
                         </div>
