@@ -146,7 +146,10 @@ function resultado(){
         
                 }else if( conta_acerto < 3  ){
                     //alert('vai fazer dnv');
-                    
+
+                    result_value = document.getElementById("id_result");
+                    result_value.setAttribute("value", 0)  ;
+
                     video_link = document.querySelector("#video_link");
                     btt = document.querySelector("#btt_valida");
 

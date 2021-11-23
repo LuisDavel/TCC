@@ -5,16 +5,23 @@
 	$nota = $_POST['nota'];
     $id_usuario = $_POST['id_usuario'];
 	
-    $sql = "INSERT INTO modulo
-    VALUES (null, '$id_usuario' , '1', 'exercicio_soma', 'N', '$nota')";
+    if ($nota >= '6') {
+        $sql = "INSERT INTO modulo
+        VALUES (null, '$id_usuario' , '1', 'exercicio_soma', 'N', '$nota')";
+    } else {
+        $sql = "INSERT INTO modulo
+        VALUES (null, '$id_usuario' , '1', 'exercicio_soma', 'M', '$nota')";
+    }
+
     
 	$query = mysqli_query($con, $sql);
-	//echo $sql;''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	//echo $sql;
 
 	if( $query ){
 		header('Location: ../views/index.php?retorno=2');
 	}else{
-		echo mysqli_query($con, $sql);
+        header('Location: ../views/index.php?erro');
+		
 	}
 
 	mysqli_close($con);

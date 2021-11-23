@@ -120,12 +120,15 @@ function resultado(){
         
                 }else if( conta_acerto < 3  ){
                     //alert('vai fazer dnv');
-                    
+
                     video_link = document.querySelector("#video_link");
                     btt = document.querySelector("#btt_valida");
 
                     video_link.setAttribute('src', '../img/errei.mp4');
                     btt.setAttribute('type', 'hidden');
+
+                    result_value = document.getElementById("id_result");
+                    result_value.setAttribute("value", 1);
 
 
                     abreVideo();
