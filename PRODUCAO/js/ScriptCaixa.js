@@ -40,7 +40,7 @@ function log(message) {
         img = event.target.getAttribute('value');
         //log('Valor da caixa ' + img)
        // log('valor do ITem: ' + valor)
-        event.target.src = "../../HOMOLOGA/img/fechada.png";
+        event.target.src = "../img/fechada.png";
         if(valor != img ){
             log('Valor da caixa ' + img)
             log('valor do ITem: ' + valor)
@@ -51,28 +51,49 @@ function log(message) {
 
   }, false);
 
+  var erro = 0;
+  var acerto = 0;
+
   document.addEventListener("dragleave", function( event ) {
      
       if ( event.target.className == "dropzone" ) {
         event.target.style.border = "none"
-        event.target.src = " ../../HOMOLOGA/img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+        event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
       }
 
     }, false);
-
+    var cont = 0;
     document.addEventListener("drop", function( event ) {
         if(valor != img ){
-            event.target.src = " ../../HOMOLOGA/img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+            event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
             event.target.style.border = "none"
-            return event.preventDefault();
+            erro += 1;
+            console.log('erros: ' + erro)
         }
 
         event.preventDefault();
    
         if ( event.target.className == "dropzone" ) {
             event.target.style.border = "none"
-            event.target.src = " ../../HOMOLOGA/img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+            event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
             log('DOPREI: ' + valor)
+            cont += 1;
+            console.log("cont" + cont)
+            if(cont == 5){
+               acerto = cont - erro;
+               if(acerto > erro){
+                    abreVideo()
+               }else{
+                     video_link = document.querySelector("#video_link");
+                     btt = document.querySelector("#btt_valida");
+                    
+                     video_link.setAttribute('src', '../img/errei.mp4');
+                     btt.setAttribute('type', 'hidden');
+                    
+                    
+                     abreVideo();
+               }
+            }
             //event.target.style.background = "";
             dragged.parentNode.removeChild( dragged );
             event.target.appendChild( dragged );
@@ -88,7 +109,7 @@ function log(message) {
 
         if ( event.target.className == "dropzone2" ) {
             event.target.style.border = "none"
-            event.target.src = " ../../HOMOLOGA/img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+            event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
             log('DOPREI: ' + valor)
             //event.target.style.background = "";
             dragged.parentNode.removeChild( dragged );
@@ -97,15 +118,16 @@ function log(message) {
     }, false);
 
 
-function abreVideo() {
-    document.getElementById('id01').style.display='block';
-    video.autoplay = true;
-    video.load();
-}
-
-function fecharVideo() {
-    document.getElementById('id01').style.display='none';
-    video.autoplay= false;
-    video.load();
-    location.reload();
-}
+    function abreVideo() {
+        document.getElementById('id01').style.display='block';
+        video.autoplay = true;
+        video.load();
+    }
+    
+    function fecharVideo() {
+        document.getElementById('id01').style.display='none';
+        video.autoplay= false;
+        video.load();
+        location.reload();
+    }
+    

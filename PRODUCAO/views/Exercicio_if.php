@@ -11,7 +11,11 @@
 </head>
 <body>
     <div  class="img">
+             
         <div class="container">
+            
+           
+
             <div class="acao" style="background-image: url('../img/Nsei.png'); background-repeat: no-repeat; background-size: 100%;
             background-color: #0b34b7;;">
                 <div class="dropzone" >
@@ -23,30 +27,40 @@
             
 
             <div id="id01" class="modal">
-
-                <!-- Modal content -->
                 <div class="modal-content">
-                  
-                  <div class="close" onclick="fecharVideo()" >&times; Refazer</div>
-                  <br>
-                  <br>
-                  <div>
-                     <video id="video" width="900" height="800" controls="controls">
-                     <source src="../img/Gatinho.mp4" type="video/mp4">
-                   </div>
+                    <br>
+                    <!-- imput do Hidden Resultado  -->
+                    <form action="../includes/exercicio_soma_db.php" method="POST">
+                        <input type="submit" id="btt_valida" class="close" value="Avançar">
+                        <input type="hidden"  value="" name="nota" id="id_result"  readonly>
+                        <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                        <input type="hidden"  value="exercicio_soma" name="exercicio_soma" id="exercicio"  readonly>
+                        <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                        <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
+                    </form>
+                    <input type="submit" value="Refazer" onclick="fecharVideo()" >
+                    <br>
+                    <div>
+                       <video id="video" width="900" height="800">
+                       <source id="video_link" src="../img/vide_conclusao.mp4" type="video/mp4">
+                    </div>
                 </div>
-              
-            </div>
 
-            
+            </div>
+            <div>
+                    <a href="exercicios_modulo2.php"><input type="submit" value="voltar"></a>
+                    <p>&nbsp</p>
+               
+                </div>
             <div class="escolhas">
+               
                 <div class="dropzone2" style="width: 80%; justify-content: inline;">
                 
                     <img src="../img/21ab706902567bd0c10ba01c61d7541e-silhueta-do-icone-da-escada.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "1" style="width: 80px;" alt=" 1">
 
-                    <img src="../img/Camaelastica.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "2" style="width: 80px;" alt=" 1">
+                    <img src="../img/Camaelastica.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "0" style="width: 80px;" alt=" 1">
 
-                    <img src="../img/corda.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "2" style="width: 80px;" alt=" 1">  
+                    <img src="../img/corda.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "0" style="width: 80px;" alt=" 1">  
                                         
                 
                 </div>

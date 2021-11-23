@@ -29,7 +29,7 @@ function msg (msg){
 
 // RANDOMIZA
 function random() {
-        result_final = 0;
+    result_final = 0;
 
     for(var i = 1; i< 4; i++){
 
@@ -81,9 +81,10 @@ function random() {
     //document.getElementById('result_final').innerHTML = result_final
     
 }
-
+var soma_final = 0
 // CALCULAR PRA VER SE ACERTOU
 function recebe_valor(){
+    nan1 = 0;
     for(var i = 1; i < 7; i++){
         o = parseInt(document.getElementById("numero" + i).value);
     
@@ -102,20 +103,13 @@ function recebe_valor(){
         }
 
     }
-/*
-    f = a1 + b1 + c1 + d1 + e1 + f1;
-
-    if(isNaN(f)){
-        return  alert('faltam numeros: ' + f);
-      
-    }
+   
     
-    msg('resultados final: ' + f);
-*/
 
     (a1 + d1 ) == a ? (
         document.getElementById('numero1').style.borderColor = 'green',
-        document.getElementById('numero4').style.borderColor = 'green',    
+        document.getElementById('numero4').style.borderColor = 'green',   
+      
         msg('resultados modificado: ' + (a1 + d1))
     ): (
         document.getElementById('numero1').style.borderColor = 'red',
@@ -125,7 +119,8 @@ function recebe_valor(){
     
     (b1 + e1) == b ? (
         document.getElementById('numero2').style.borderColor = 'green',
-        document.getElementById('numero5').style.borderColor = 'green',    
+        document.getElementById('numero5').style.borderColor = 'green',
+          
         msg('resultados modificado: '  + (b1 + e1))
     ) : (
         document.getElementById('numero2').style.borderColor = 'red',
@@ -135,7 +130,8 @@ function recebe_valor(){
 
     (c1 + f1) == c ? (
         document.getElementById('numero3').style.borderColor = 'green',
-        document.getElementById('numero6').style.borderColor = 'green',    
+        document.getElementById('numero6').style.borderColor = 'green',  
+       
         msg('resultados modificado: '  + (c1 + f1))
     ) : (
         document.getElementById('numero3').style.borderColor = 'red',
@@ -144,30 +140,13 @@ function recebe_valor(){
     );
 
     
-
+    soma_final =  (a1 + b1 + c1 + d1 + e1 + f1);
 
     
 
-   //msg('resultados modificado: ' + f);
 
 }
-
-/* function valida_conteudo(){
-    nan1 =  a1 + b1 + c1;
-
-    valida_horizontal = (a1 + b1 + c1);
-
-    if((isNaN(nan1) && valida_horizontal != c) && document.getElementById('numero1').style.borderColor == 'green' ){
-       return
-    }else{
-        document.getElementById('numero1').style.borderColor = 'black'
-    }
-
-    }
-*/
-    
-    
-
+ 
 /////////////////////////////////// DPS VEJo
 
 var temporiza;
@@ -180,39 +159,53 @@ $(".dropzone").on("input", function(){
     }, 500);
  });
 
-
-$("#valor").on("input", function(){
-   clearTimeout(temporiza);
-   temporiza = setTimeout(function(){
-        resultado(); // FUNçÃO A SER DISPARADA
-   }, 1000);
-});
+ var valor = 0;
 
 function resultado(){
     
-    var valor =  document.getElementById('valor').value;
-    if(valor != ''){
-        if(tentativa != 5){
-            if(result_final == valor){
-                tentativa += 1;
-                alert(valor);
-                conta_acerto =  conta_acerto + 1;
-                msg('Acertos + ' + conta_acerto)
-                msg('-----------------------')
-                random();
-                msg(tentativa)
-            }else if(result_final != valor){
-                tentativa += 1;
-                alert(valor);
-                conta_erro = conta_erro + 1;
-                msg('Erros + ' + conta_erro)
-                msg('-----------------------')
-                random();
-                msg(tentativa)
-            }
-          
-        }else{
-            msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro)
-        }
+    if(soma_final == (result_final/2)){
+        valor = result_final
+        msg(valor)
+        
     }
+
+    if(soma_final != (result_final/2)){
+        valor = 0
+        msg(valor)
+       
+    }
+
+    //abreVideo();
+    if(valor != ''){
+        if(valor == result_final){
+            result_value = document.getElementById("id_result");
+            result_value.setAttribute("value", 10)  ;
+            abreVideo();
+        } 
+        
+        if(valor == 0){
+            video_link = document.querySelector("#video_link");
+            btt = document.querySelector("#btt_valida");
+
+            video_link.setAttribute('src', '../img/errei.mp4');
+            btt.setAttribute('type', 'hidden');
+
+
+            abreVideo();
+        }
+    
+    }
+}
+
+function abreVideo() {
+    document.getElementById('id01').style.display='block';
+    video.autoplay = true;
+    video.load();
+}
+
+function fecharVideo() {
+    document.getElementById('id01').style.display='none';
+    video.autoplay= false;
+    video.load();
+    location.reload();
 }

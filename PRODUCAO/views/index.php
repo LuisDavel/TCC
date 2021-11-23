@@ -124,7 +124,7 @@
 <?php
             /// IF Q VALIDA A PONTUAÇÃO PARA LIBERA O MODULO
 ?>                
-                <a href="exercicios_modulo1.php"><div class="card" style="background: rgb(246,254,16);
+                <a href="exercicios_modulo2.php"><div class="card" style="background: rgb(246,254,16);
                                          background: linear-gradient(90deg, rgba(246,254,16,1) 0%, rgba(224,91,22,1) 50%, rgba(255,128,128,1) 100%);">
                     <p> Modulo 2 </p>                            
                 </div>

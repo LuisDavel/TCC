@@ -53,7 +53,7 @@
                         <div class="modal-content2">
                           <span class="close2">&times;</span>
                           <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-                          <p class="p1"> OOh, está deve ser a sala de treino ... Aqui é o começo de tudo, escolha um exercicio JOVEM, e boa SORTE</p><br>
+                          <p class="p1"> OOpaa, como é bom te encontrar entusiasmo assim ... Aqui é o modulo mais avançado, escolha um exercicio meu rapaz, e boa SORTE</p><br>
                         
                         </div>
 
@@ -66,18 +66,18 @@
                         <tr>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="ExercicioSoma.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exercicioif.png" alt="Card image cap"></a>
+                                    <a href="exercicio_if.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exercicioif.png" alt="Card image cap"></a>
                                     <div class="card-body">
-                                        <h5 class="card-title">1# - Soma</h5>
+                                        <h5 class="card-title">1# - Ajude o gato </h5>
                                         <p class="card-text">Modulo para o preparatorio para virar um aspirante a heroi, você consegue ?</p>
                                     </div>
                                  </div>    
                             </td>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="SomaDivertida.php" style="border: 1px solid black"><img class="card-img-top" src="../img/caixa.png" alt="Card image cap"></a>
+                                    <a href="md1_exec1_caixa.php" style="border: 1px solid black"><img class="card-img-top" src="../img/caixa.png" alt="Card image cap"></a>
                                     <div class="card-body">
-                                        <h5 class="card-title">2# - Soma Divertida</h5>
+                                        <h5 class="card-title">2# - Caixa</h5>
                                         <p class="card-text"> Modulo para o preparatorio para virar um aspirante a heroi, você consegue ?</p>
                                     </div>
                                  </div>    
@@ -86,9 +86,9 @@
                         <tr>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="" style="border: 1px solid black"><img class="card-img-top" src="../img/maze.png" alt="Card image cap"></a>
+                                    <a href="maze.php" style="border: 1px solid black"><img class="card-img-top" src="../img/maze.png" alt="Card image cap"></a>
                                     <div class="card-body">
-                                        <h5 class="card-title">4# - Ache o meio </h5>
+                                        <h5 class="card-title">3# - Labirinto </h5>
                                       <p class="card-text">Vamos para o preparatorio para virar um aspirante a heroi, você consegue ?</p>
                                     </div>
                                 </div>    

@@ -54,9 +54,20 @@ function log(message) {
       if ( event.target.className == "dropzone" ) {
          
         if(valor == 1){
+            result_value = document.getElementById("id_result");
+            result_value.setAttribute("value", 10)  ;
             abreVideo();
             //log('DOPREI: ' + valor)
+        }else{
+            video_link = document.querySelector("#video_link");
+            btt = document.querySelector("#btt_valida");
+            result_value = document.getElementById("id_result");
+            result_value.setAttribute("value", 0)  ;
+            video_link.setAttribute('src', '../img/errei.mp4');
+            btt.setAttribute('type', 'hidden');
+            abreVideo();
         }
+
             log('DOPREI: ' + valor)
             
           //event.target.style.background = "";

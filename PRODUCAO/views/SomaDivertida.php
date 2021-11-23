@@ -12,11 +12,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/SomaDivertida.css">
-    <title>Valor da fruta</title>
+    <link rel="stylesheet" href="../css/dialogo.css">
+    <title>Soma divertida</title>
 </head>
 <body> 
     <div class="img"> 
         <div class="container">
+
+                    <div id="id01" class="modal">
+                        <div class="modal-content">
+                            <br>
+                            <!-- imput do Hidden Resultado  -->
+                            <form action="../includes/exercicio_soma_db.php" method="POST">
+                                <input type="submit" id="btt_valida" class="close" value="Avançar">
+                                <input type="hidden"  value="" name="nota" id="id_result"  readonly>
+                                <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
+                                <input type="hidden"  value="exercicio_soma" name="exercicio_soma" id="exercicio"  readonly>
+                                <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
+                                <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
+                            </form>
+                            <input type="submit" value="Refazer" onclick="fecharVideo()" >
+                            <br>
+                            <div>
+                               <video id="video" width="900" height="800">
+                               <source id="video_link" src="../img/vide_conclusao.mp4" type="video/mp4">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="myModal" class="modal2">
+                        <!-- Modal content -->
+                        <div class="modal-content2">
+                          <span class="close2">&times;</span>
+                          <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                          <p class="p1"> Para um primeiro teste temos essa somatoria, é importante encontrar a lógica na vertical, talvez isso ajude em algo ... TAMBÉM temos 5 tentativas então VOCÊ CONSEGUE!!! </p><br>
+                        
+                        </div>
+
+                    </div>
+
+
             <div class="corpo">
                 <div = class="quadrados">
                     <table>
@@ -45,10 +81,11 @@
                 </div>
             </div>
         
-            <button onclick="recebe_valor()">Clicka</button>
+            <input type="submit" value="Validar" onclick="resultado()"> 
         </div>
     </div>
 </body>
 
 <script src="../js/script_somaDivertida.js" defer></script>
+<script src="../js/dialogo_inicio.js" defer></script>
 </html>
