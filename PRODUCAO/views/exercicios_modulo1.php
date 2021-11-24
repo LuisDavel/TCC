@@ -95,7 +95,7 @@
                             </td>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="" style="border: 1px solid black"><img class="card-img-top" src="../img/exerc_metadinha.png" alt="Card image cap"></a>
+                                    <a href="acheomeio.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exerc_metadinha.png" alt="Card image cap"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">4# - Ache o meio </h5>
                                       <p class="card-text">Vamos para o preparatorio para virar um aspirante a heroi, você consegue ?</p>

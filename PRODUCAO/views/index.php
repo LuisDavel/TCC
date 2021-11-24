@@ -43,7 +43,10 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Correções</a>
           </li>
-                    <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="lista_rank.php">Ranking</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="login.php?acao=sair">SAIR</a>
           </li>
         </ul>
