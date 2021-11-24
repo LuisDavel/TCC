@@ -163,7 +163,7 @@ function resultado(){
                 }else if(conta_acerto == 5 ){
                     result_value = document.getElementById("id_result");
                     result_value.setAttribute("value", 10) ;    
-                    
+                    abreVideo();
                 }
         
             }        

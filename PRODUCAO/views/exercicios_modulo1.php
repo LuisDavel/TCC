@@ -66,7 +66,7 @@
                         <tr>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="ExercicioSoma.php" style="border: 1px solid black"><img class="card-img-top" src="../img/soma_exercicio.png" alt="Card image cap"></a>
+                                    <a href="exercicio_soma.php" style="border: 1px solid black"><img class="card-img-top" src="../img/soma_exercicio.png" alt="Card image cap"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">1# - Soma</h5>
                                         <p class="card-text">Modulo para o preparatorio para virar um aspirante a heroi, você consegue ?</p>
@@ -75,7 +75,7 @@
                             </td>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="SomaDivertida.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exercicios_divertida.png" alt="Card image cap"></a>
+                                    <a href="exercicio_soma_divertida.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exercicios_divertida.png" alt="Card image cap"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">2# - Soma Divertida</h5>
                                         <p class="card-text"> Modulo para o preparatorio para virar um aspirante a heroi, você consegue ?</p>
@@ -86,7 +86,7 @@
                         <tr>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="valor_fruta.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exerc_fruta.png" alt="Card image cap"></a>
+                                    <a href="exercicio_fruta.php" style="border: 1px solid black"><img class="card-img-top" src="../img/exerc_fruta.png" alt="Card image cap"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">3# - Valor da fruta </h5>
                                         <p class="card-text">Modulo para o preparatorio para virar um aspirante a heroi, você consegue ?</p>

@@ -41,7 +41,7 @@
             <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Correções</a>
+            <a class="nav-link" href="correcoes.php">Correções</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="lista_rank.php">Ranking</a>
