@@ -114,7 +114,7 @@
                     </td>
                     <td>
                         <tr>Nicolas</tr>
-                        <tr><div class="progress-barr" style="--progress: 20;"></div></tr>
+                        <tr><div class="progress-barr" style="--progress: <?php echo '20' ?>;"></div></tr>
                     </td>
 
 

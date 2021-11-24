@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<link rel="stylesheet" type="text/css" href="site.css">
+		<link rel="stylesheet" type="text/css" href="../css/lista_rank.css">
 	</head>
 	<body>
 		<table>
@@ -33,6 +33,7 @@
 						while($item = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 				?>
 				<tr>
+				<td><div class="progress-barr" style="--progress: <?php echo $item['nota']; ?>;"></div></td>
 					<td><?php echo $item['cd_usuario']; ?></td>
 					<td><?php echo $item['ds_nome_heroi']; ?></td>
 					<td><?php echo $item['nome_exerc']; ?></td>
