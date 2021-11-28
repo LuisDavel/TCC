@@ -54,4 +54,4 @@
 </body>
 </html>
 
-<script src="dialogo.js" defer> </script> 
+<script src="../js/dialogo.js" defer> </script> 

@@ -359,7 +359,7 @@
    if (newX === goal.x && newY === goal.y) {
      // Avatar has arrived at the goal.
      isRunning = false;
-     document.getElementById('ding').play();
+     resultado();
      setTimeout(initMaze, 500);
    }
  }
@@ -375,3 +375,28 @@
    var element = document.getElementById('avatarPath');
    element.setAttribute('d', d.join(' '));
  }
+
+ 
+
+
+ /// SOCORRO
+
+ result_value = 0;
+ function resultado(){
+    result_value = document.getElementById("id_result");
+    result_value.setAttribute("value", 10)  ;
+    abreVideo();
+ }
+
+ function abreVideo() {
+  document.getElementById('id01').style.display='block';
+  video.autoplay = true;
+  video.load();
+}
+
+function fecharVideo() {
+  document.getElementById('id01').style.display='none';
+  video.autoplay= false;
+  video.load();
+  location.reload();
+}

@@ -17,9 +17,9 @@
 	echo $sql;
 
 	if( $query ){
-		header('Location: ../views/index.php?retorno=2');
+		header('Location: ../views/maze.php');
 	}else{
-        header('Location: ../views/index.php?erro');		
+        header('Location: ../views/maze.php?erro');		
 	}
 
 	mysqli_close($con);

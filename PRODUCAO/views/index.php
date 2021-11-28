@@ -16,6 +16,11 @@
         $sql = "SELECT tp_heroi FROM USUARIO WHERE CD_USUARIO = " . $id;
         $retorno = mysqli_query($con, $sql);
 
+// SELECT PARA VERIFICAR SOMA DE PONTOS INSIGNIA
+
+     
+
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +43,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="correcoes.php">Correções</a>
@@ -94,21 +99,49 @@
                       <p class="p1"> Identificador:</p>
                       <p> <?php echo($_SESSION['id']); ?></p>
                       <p class="p1">Conquistas</p>
-
                       <div class="insignia">
+<?php
+    }
+      $sql2 =  "SELECT sum(a.nota_exerc) nota FROM modulo a JOIN usuario b ON (a.cd_usuario=b.cd_usuario) WHERE b.CD_USUARIO =".$id." group by a.nome_exerc order by nota";
+      $retorno2 = mysqli_query($con, $sql2);
+      while($item2 = mysqli_fetch_array($retorno2, MYSQLI_ASSOC)) {
+
+ ?>
+                     
                         <ul>
-		                      <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
-    	                    <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+                        <?php
+                            if($item2['nota'] > 1){
+                                
+?>
+                            <li><abbr title="Por você ter mais de 10 pontos"><img src="../img/circulo_azul.png" alt="a" style="width:10px;"></abbr></li>
+<?php
+                          }else if($item2['nota'] < 10){
+?>
+                        
+                          <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>   
                           <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
-    	                    <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+                          <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+    	                    <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>   
+<?php
+                          }else{
+                            
+                          }                                   
+ ?>
+                            
 	                      </ul>
-                      </div>
-                    </div>
-
+                     
                    
-                </div>
+                   
+                
+<?php
+    }
+      
+ ?>
+               </div>
+      </div>
 
-                <div class="div2">
+ </div>
+                <!-- <div class="div2">
                   <p class="p1">Rankings</p>
                   <table >
                     <td>
@@ -125,7 +158,7 @@
                   
 
 
-                </div>
+                </div> -->
             </div> 
             <br>  
 
@@ -149,9 +182,7 @@
             </div>
         </div>
 
- <?php
-    }
- ?>
+ 
     </section>
     <!-- BODY fim -->
 

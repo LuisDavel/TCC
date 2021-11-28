@@ -7,26 +7,24 @@
 	
 	if ($nota >= '6') {
         $sql = "INSERT INTO modulo
-        VALUES (null, '$id_usuario' , '1', 'exercicio_fruta', 'S', '$nota')";
+        VALUES (null, '$id_usuario' , '1', 'exercicio_ache_meio', 'S', '$nota')";
     } else {
         $sql = "INSERT INTO modulo
-        VALUES (null, '$id_usuario' , '1', 'exercicio_fruta', 'N', '0')";
+        VALUES (null, '$id_usuario' , '1', 'exercicio_ache_meio', 'N', '0')";
     }
 
 
 	$query = mysqli_query($con, $sql);
 	//echo $sql;
-
 	if ($nota >= '6'){
-    	if( $query ){
-		    header('Location: ../views/acheomeio.php');
+    	if( $query  ){
+		    header('Location: ../views/index.php');
 	    }else{
-            header('Location: ../views/acheomeio.php?erro');		
+            header('Location: ../views/index.php?erro');		
 	    }
     }else{
-        header('Location: ../views/exercicio_fruta.php');	
+        header('Location: ../views/acheomeio.php?erro');	
     }
-
-	
+    
 	mysqli_close($con);
 ?>

@@ -16,11 +16,17 @@
 	$query = mysqli_query($con, $sql);
 	echo $sql;
 
-	if( $query ){
-		header('Location: ../views/index.php?retorno=2');
-	}else{
-        header('Location: ../views/index.php?erro');		
-	}
+    
+    if ($nota >= '6'){
+    	if( $query ){
+		    header('Location: ../views/exercicio_fruta.php');
+	    }else{
+            header('Location: ../views/exercicio_fruta.php?erro');		
+	    }
+    }else{
+        header('Location: ../views/exercicio_soma_divertida.php');	
+    }
+
 
 	mysqli_close($con);
 ?>
