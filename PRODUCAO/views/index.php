@@ -100,22 +100,27 @@
                       <p> <?php echo($_SESSION['id']); ?></p>
                       <p class="p1">Conquistas</p>
                       <div class="insignia">
+                        <ul>
 <?php
     }
-      $sql2 =  "SELECT sum(a.nota_exerc) nota FROM modulo a JOIN usuario b ON (a.cd_usuario=b.cd_usuario) WHERE b.CD_USUARIO =".$id." group by a.nome_exerc order by nota";
+      $sql2 =  "SELECT sum(a.nota_exerc) nota 
+      FROM modulo a 
+      JOIN usuario b ON (a.cd_usuario=b.cd_usuario) 
+      WHERE a.CD_USUARIO = ".$id."";
+      
       $retorno2 = mysqli_query($con, $sql2);
       while($item2 = mysqli_fetch_array($retorno2, MYSQLI_ASSOC)) {
 
  ?>
                      
-                        <ul>
-                        <?php
-                            if($item2['nota'] > 1){
+                       
+<?php
+                      if($item2['nota'] > 10){
                                 
 ?>
                             <li><abbr title="Por você ter mais de 10 pontos"><img src="../img/circulo_azul.png" alt="a" style="width:10px;"></abbr></li>
 <?php
-                          }else if($item2['nota'] < 10){
+                        }else{
 ?>
                         
                           <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>   
@@ -123,12 +128,11 @@
                           <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
     	                    <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>   
 <?php
-                          }else{
-                            
-                          }                                   
+                          }
+                                                           
  ?>
                             
-	                      </ul>
+	                    
                      
                    
                    
@@ -137,6 +141,7 @@
     }
       
  ?>
+            </ul>
                </div>
       </div>
 
