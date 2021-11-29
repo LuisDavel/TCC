@@ -107,7 +107,7 @@
       FROM modulo a 
       JOIN usuario b ON (a.cd_usuario=b.cd_usuario) 
       WHERE a.CD_USUARIO = ".$id."";
-      
+
       $retorno2 = mysqli_query($con, $sql2);
       while($item2 = mysqli_fetch_array($retorno2, MYSQLI_ASSOC)) {
 
@@ -143,6 +143,7 @@
  ?>
             </ul>
                </div>
+               <a href="">Perfil</a>
       </div>
 
  </div>
