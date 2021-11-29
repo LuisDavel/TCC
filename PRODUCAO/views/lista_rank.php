@@ -56,8 +56,8 @@
 								<?php
             				    	$sql = "SELECT a.cd_usuario,b.ds_nome_heroi, a.nome_exerc, sum(a.nota_exerc) nota
             				    	FROM modulo a JOIN usuario b ON (a.cd_usuario=b.cd_usuario)
-            				    	group by a.nome_exerc
-            				    	order by nota";
+            				    	group by b.ds_nome_heroi
+            				    	order by  nota DESC";
             				    	$query = mysqli_query($con, $sql);
             				   		if(!$query) {
            						 ?>
