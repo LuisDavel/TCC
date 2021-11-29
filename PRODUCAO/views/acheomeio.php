@@ -3,6 +3,7 @@
 <head>
     <?php 
         include('../conexao.php');
+        $id = $_SESSION['id'];
     ?>
     <meta charset="UTF-8">
     

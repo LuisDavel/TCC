@@ -71,7 +71,7 @@
 								<tr>
 										
 										<td><?php echo $item['ds_nome_heroi']; ?></td>
-										<td class="numero_td"><div class="progress-barr" style="--progress: <?php echo $item['nota']; ?>;"><?php echo $item['nota']; ?></div></td>
+										<td class="numero_td"><div class="progress-barr" style="--progress: <?php echo $item['nota']; ?>;"></div></td>
 						
 								</tr>
 								<?php

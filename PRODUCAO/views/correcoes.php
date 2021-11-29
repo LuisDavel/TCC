@@ -2,6 +2,7 @@
 <html lang="pt_br">
 <?php
         include ('../conexao.php');
+		$id = $_SESSION['id'];
     ?>
 
 <head>
@@ -47,7 +48,7 @@
                 	<table >
 						<tbody>
 								<?php
-            				    	$sql = "SELECT modulo, NOME_EXERC FROM `modulo` WHERE `VERIFICA_ERRO_EXERC` = 'N'";
+            				    	$sql = "SELECT modulo, NOME_EXERC FROM `modulo` WHERE `VERIFICA_ERRO_EXERC` = 'N' AND CD_USUARIO = ".$id."";
             				    	$query = mysqli_query($con, $sql);
             				   		if(!$query) {
            						 ?>
@@ -90,7 +91,7 @@
                                 	        <p style="font-size: 20px" class="card-text"><?php if($item['NOME_EXERC'] == 'exercicio_soma_divertida') { 
 												echo(' A soma em vertical deve estar correta, porem a soma horizontal também deve coencidir ');
 												
-											}elseif($item['NOME_EXERC'] == 'exercicio_soma'){
+											}elseif($item['NOME_EXERC'] == 'exercicio_gato'){
 												echo(' Some a terceira coluna na vertical, e você obterá o resultado desejado.');
 											}elseif($item['NOME_EXERC'] == 'exercicio_fruta'){
 												echo('Fique atento aos sinais de mais e menos, a soma das frutas condiz com o valor dela');
