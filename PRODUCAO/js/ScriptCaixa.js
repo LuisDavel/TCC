@@ -58,26 +58,52 @@ function log(message) {
      
       if ( event.target.className == "dropzone" ) {
         event.target.style.border = "none"
-        event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+        event.target.src = " ../img/caixa_feixada.png";
       }
 
     }, false);
+    
     var cont = 0;
+    var cont_caixa1 = 0;
+    var cont_caixa2 = 0;
+    var cont_caixa3 = 0;
+    //var result_caixa1 = document.getElementById('p_result_caixa1');
+    var result_caixa2 = document.getElementById('p_result_caixa2');
+    var result_caixa3 = document.getElementById('p_result_caixa3');
+
+
     document.addEventListener("drop", function( event ) {
+      
         if(valor != img ){
-            event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+            event.target.src = " ../img/caixa_feixada.png";
             event.target.style.border = "none"
             erro += 1;
             console.log('erros: ' + erro)
+        }else{
+            //cont_caixa = 0;
+            if(valor == 1 ){
+                //cont_caixa = 0;
+                cont_caixa1 += 1;
+                document.getElementById('p_result_caixa1').innerText = cont_caixa1;
+            }else if(valor == 2  ){
+               // cont_caixa = 0;
+                cont_caixa2 += 1;
+                document.getElementById('p_result_caixa2').innerText = cont_caixa2;
+            }else if(valor == 3  ){
+                //cont_caixa = 0;
+                cont_caixa3 += 1;
+                document.getElementById('p_result_caixa3').innerText = cont_caixa3;
+            }      
         }
 
         event.preventDefault();
    
         if ( event.target.className == "dropzone" ) {
             event.target.style.border = "none"
-            event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+            event.target.src = " ../img/caixa_feixada.png";
             log('DOPREI: ' + valor)
             cont += 1;
+            
             console.log("cont" + cont)
             if(cont == 5){
                acerto = cont - erro;
@@ -89,8 +115,9 @@ function log(message) {
 
                      btt_refaz = document.querySelector("#btt_refaz");
                      btt_refaz2 = document.querySelector("#btt_refaz2");
-                     btt_refaz2.setAttribute('type', 'hidden');
-                     btt_refaz.setAttribute('type', 'submit');
+
+                     btt_refaz2.setAttribute('type', 'submit');
+                     btt_refaz.setAttribute('type', 'hidden');
 
                      video_link = document.querySelector("#video_link");
                      btt = document.querySelector("#btt_valida");
@@ -98,8 +125,6 @@ function log(message) {
                      video_link.setAttribute('src', '../img/errei.mp4');
                      btt.setAttribute('type', 'hidden');
 
-                    
-                    
                      abreVideo();
                }
             }
@@ -118,7 +143,7 @@ function log(message) {
 
         if ( event.target.className == "dropzone2" ) {
             event.target.style.border = "none"
-            event.target.src = " ../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png";
+            event.target.src = " ../img/caixa_feixada.png";
             log('DOPREI: ' + valor)
             //event.target.style.background = "";
             dragged.parentNode.removeChild( dragged );

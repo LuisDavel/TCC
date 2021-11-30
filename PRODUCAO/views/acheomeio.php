@@ -45,7 +45,7 @@
                 <div class="modal-content">
                     <br>
                     <!-- imput do Hidden Resultado  -->
-                    <form action="../includes/exercicio_if_db.php" method="POST">
+                    <form action="../includes/acheomeio_db.php" method="POST">
                         <input type="submit" id="btt_valida" class="close" value="Avançar">
                         <input type="hidden"  value="" name="nota" id="id_result"  readonly>
                         <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>
@@ -53,7 +53,7 @@
                         <input type="hidden"  value="" name="valida_exercicio" id="valida_exercicio"  readonly>
                         <input type="hidden"  value="<?php echo $_SESSION['id'] ?>" name="id_usuario" id="id_usuario"  readonly><br>
                     </form>
-                    <form action="../includes/exercicio_if_db.php" method="POST">
+                    <form action="../includes/acheomeio_db.php" method="POST">
                         <input type="hidden" value="Refazer" id="btt_refaz" onclick="fecharVideo()" >
                         <input type="hidden"  value="" name="nota" id=""  readonly>
                         <input type="hidden"  value="modulo_1" name="modulo" id="modulo"  readonly>

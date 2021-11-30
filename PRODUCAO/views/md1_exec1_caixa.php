@@ -67,18 +67,30 @@
 
 
             <div class="acao" >
-            
-                <figure>
-                    <img class="dropzone" id="imge" src="../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png" value="1" alt="Minha Figura">
-                </figure>
-                <figure>
-                    <img class="dropzone" src="../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-101.png" value="2" alt="Minha Figura">
-                </figure>
-                
-                <figure>
-                    <img class="dropzone" src="../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-102.png" value="3" alt="Minha Figura">
-                </figure>
-
+                <table>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img class="dropzone" id="imge" src="../img/caixa_feixada.png" value="1" alt="Minha Figura">
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img class="dropzone" src="../img/caixa_feixada.png" value="2" alt="Minha Figura">
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                 <img class="dropzone" src="../img/caixa_feixada.png" value="3" alt="Minha Figura">
+                             </figure>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p class="tr_socorro"><b>Equipamentos</b><p  class="tr_socorro" id="p_result_caixa1"></p></p></td>
+                        <td><p class="tr_socorro"><b>Alimentos</b><p class="tr_socorro" id="p_result_caixa2"></p></p></td>
+                        <td><p class="tr_socorro"><b>Uniforme</b><p class="tr_socorro" id="p_result_caixa3"></p></p></td>
+                    </tr>
+                </table>
             </div>
         <!-- VIDEO -->
             

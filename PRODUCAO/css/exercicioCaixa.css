@@ -136,7 +136,12 @@ input[type=submit] {
     margin-left: 250px;
     margin-right: 0px;
   }
-  
+
+
+  .tr_socorro{
+    text-align: center;
+    margin-left: -40px;
+  }
   /* The Close Button */
   .close {
    
