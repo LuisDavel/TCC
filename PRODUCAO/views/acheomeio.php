@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/exerciciomeio.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+    <link rel="stylesheet" href="../css/dialogo.css">
     <title>Aprendendo com escolhas</title>
 </head>
 <body>
@@ -71,6 +71,20 @@
 
             </div>
 
+            <div id="myModal" class="modal2">
+                        <!-- Modal content -->
+                        <div class="modal-content2">
+                          <span class="close2">&times;</span>
+                          <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                          <p class="p1"> Para o primeiro desafio, analise bem a imagem, acho que faltam coisas nela ... e para a segunda creio que está tudo certo ... Arraste para os quadrados com interrogação o que você acha certo</p><br>
+                        
+                        </div>
+
+                    </div>
+        
+
+
+
             <div>
                 <a href="exercicios_modulo2.php"><input type="submit" value="voltar"></a>
                 <p>&nbsp</p>
@@ -94,7 +108,7 @@
         </div>
     </div>
     <script src="../js/ScriptImeio.js" defer></script>
-
+    <script src="../js/dialogo_inicio.js" defer></script>
 
 </body>
 </html>

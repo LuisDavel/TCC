@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/valor_fruta.css">
+    <link rel="stylesheet" href="../css/dialogo.css">
     <title>Valor da fruta</title>
 </head>
 <body>
@@ -46,6 +47,17 @@
                     </div>
                    
                 </div>
+
+                <div id="myModal" class="modal2">
+                        <!-- Modal content -->
+                        <div class="modal-content2">
+                          <span class="close2">&times;</span>
+                          <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                          <p class="p1"> Certo, e agora ... Essa parece dificil, de numero as frutas, e a soma entre elas deve bater com o numero informado, força jovem você consegue.</p><br>
+                        
+                        </div>
+
+                    </div>
         
         <div class="container">
             <div>
@@ -98,4 +110,5 @@
 </body>
 
 <script src="../js/script_fruta.js" defer></script>
+<script src="../js/dialogo_inicio.js" defer></script>
 </html>

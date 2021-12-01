@@ -58,7 +58,7 @@
                         <div class="modal-content2">
                           <span class="close2">&times;</span>
                           <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-                          <p class="p1"> Para um primeiro teste temos essa somatoria, é importante encontrar a lógica na vertical, talvez isso ajude em algo ... TAMBÉM temos 5 tentativas então VOCÊ CONSEGUE!!! </p><br>
+                          <p class="p1"> Para um segundo teste temos esse pequeno enigma, é importante encontrar a lógica na vertical e também na horizontal ... Você consegue</p><br>
                         
                         </div>
 
