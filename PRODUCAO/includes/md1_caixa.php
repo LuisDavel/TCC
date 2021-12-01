@@ -19,10 +19,10 @@
 	    if( $query ){
 	    	header('Location: ../views/maze.php');
 	    }else{
-            header('Location: ../views/md1_caixa.php?erro');		
+            header('Location: ../views/exercicio_caixa.php?erro');		
 	    }
     }else{
-        header('Location: ../views/md1_caixa.php?erro');
+        header('Location: ../views/exercicio_caixa.php?erro');
     }
 
 	mysqli_close($con);

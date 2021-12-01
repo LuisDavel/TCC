@@ -48,7 +48,7 @@
                 	<table >
 						<tbody>
 								<?php
-            				    	$sql = "SELECT modulo, NOME_EXERC FROM `modulo` WHERE `VERIFICA_ERRO_EXERC` = 'N' AND CD_USUARIO = ".$id."";
+            				    	$sql = "SELECT distinct modulo, NOME_EXERC FROM `modulo` WHERE `VERIFICA_ERRO_EXERC` = 'N' AND CD_USUARIO = ".$id."";
             				    	$query = mysqli_query($con, $sql);
             				   		if(!$query) {
            						 ?>

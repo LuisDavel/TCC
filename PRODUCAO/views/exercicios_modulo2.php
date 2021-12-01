@@ -98,7 +98,7 @@
                             </td>
                             <td>
                                 <div class="card" style="width: 15rem;">
-                                    <a href="md1_exec1_caixa.php" style="border: 1px solid black"><img class="card-img-top" src="../img/caixa.png" alt="Card image cap"></a>
+                                    <a href="exercicio_caixa.php" style="border: 1px solid black"><img class="card-img-top" src="../img/caixa.png" alt="Card image cap"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">2# - Caixa</h5>
                                         <p class="card-text"> Modulo para o preparatorio para virar um aspirante a heroi, você consegue ?</p>
