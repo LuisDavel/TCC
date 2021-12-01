@@ -13,15 +13,6 @@
 </head>
 <body>
     <div class="img">
-        
-        <div class="container">
-            <div>
-                <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
-                <p>&nbsp</p>
-                <p class="p3">Tentativas</p>
-                <p class="p3" id="paragrafo_tentativa">0 / 5</p>
-            </div>
-            <div class="corpo">
 
                 <div id="id01" class="modal">
 
@@ -55,6 +46,17 @@
                     </div>
                    
                 </div>
+        
+        <div class="container">
+            <div>
+                <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
+                <p>&nbsp</p>
+                <p class="p3">Tentativas</p>
+                <p class="p3" id="paragrafo_tentativa">0 / 5</p>
+            </div>
+            <div class="corpo">
+
+                
 
                 <table>
                     <tr>

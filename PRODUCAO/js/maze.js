@@ -340,6 +340,7 @@
    var newX = avatar.x + dx;
    var newY = avatar.y + dy;
    if (isWall(newX, newY, true)) {
+     //alert('Voce bateu na parede')
      return;
    }
    avatar.x = newX;

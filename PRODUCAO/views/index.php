@@ -33,7 +33,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Página Inicial</title>
 </head>
-<body style="background-color: blue">
+<body style="background-color: blue; background-image: url('../img/background_login.png') ; background-repeat: no-repeat;
+    background-size:  100vw 100vh;">
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
      
@@ -118,8 +119,11 @@
                       if($item2['nota'] > 10){
                                 
 ?>
-                            <li><abbr title="Por você ter mais de 10 pontos"><img src="../img/circulo_azul.png" alt="a" style="width:10px;"></abbr></li>
-<?php
+                            <li><abbr title="Por você ter mais de 10 pontos"><img src="../img/caixa_feixada.png" alt="a" style="width:20px;"></abbr></li>
+                            <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>   
+                            <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+                            <li><img src="../img/circulo-preto.png" alt="a" style="width:10px;"></li>
+<?php                 
                         }else{
 ?>
                         

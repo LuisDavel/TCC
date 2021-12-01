@@ -15,19 +15,7 @@
 </head>
 <body>
     <div class="fundo_background">
-        
-        <div class="container">
-            <div>
-                <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
-                <p>&nbsp</p>
-                <p class="p3">Tentativas</p>
-                <p class="p3" id="paragrafo_tentativa">0 / 5</p>
-            </div>
-            
-            <div class="conteudo">
-
-            <!-- MSG VENCER -->
-                    <div id="id01" class="modal">
+        <div id="id01" class="modal">
                         <div class="modal-content">
                             <br>
                             <!-- imput do Hidden Resultado  -->
@@ -56,6 +44,18 @@
                         </div>
 
                     </div>
+        <div class="container">
+            <div>
+                <a href="exercicios_modulo1.php"><input type="submit" value="voltar"></a>
+                <p>&nbsp</p>
+                <p class="p3">Tentativas</p>
+                <p class="p3" id="paragrafo_tentativa">0 / 5</p>
+            </div>
+            
+            <div class="conteudo">
+
+            <!-- MSG VENCER -->
+                    
 
                     <div id="myModal" class="modal2">
                         <!-- Modal content -->

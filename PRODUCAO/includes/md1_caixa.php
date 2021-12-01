@@ -15,12 +15,15 @@
    
 	$query = mysqli_query($con, $sql);
 	echo $sql;
-
-	if( $query ){
-		header('Location: ../views/maze.php');
-	}else{
-        header('Location: ../views/maze.php?erro');		
-	}
+    if ($nota >= '6'){
+	    if( $query ){
+	    	header('Location: ../views/maze.php');
+	    }else{
+            header('Location: ../views/md1_caixa.php?erro');		
+	    }
+    }else{
+        header('Location: ../views/md1_caixa.php?erro');
+    }
 
 	mysqli_close($con);
 ?>

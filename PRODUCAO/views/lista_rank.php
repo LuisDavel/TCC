@@ -43,7 +43,9 @@
         
         <div class="container">
             <div class="conteudo">
+             
                 <div class="content_pergunta">
+                <p>*Lembre que a cada mês os rankins são resetados, e novas conquistas surgirão</p>
                 	<table>
 						<thead>
 							<tr>
@@ -71,7 +73,7 @@
 								<tr>
 										
 										<td><?php echo $item['ds_nome_heroi']; ?></td>
-										<td class="numero_td"><div class="progress-barr" style="--progress: <?php echo $item['nota']; ?>;"></div></td>
+										<td class="numero_td"><div class="progress-barr" style="--progress: <?php echo $item['nota']; ?>;"><?php echo $item['nota']; ?>%</div></td>
 						
 								</tr>
 								<?php

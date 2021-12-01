@@ -71,35 +71,19 @@
 												echo(' Some a terceira coluna na vertical, e você obterá o resultado desejado.');
 											}elseif($item['NOME_EXERC'] == 'exercicio_fruta'){
 												echo('Fique atento aos sinais de mais e menos, a soma das frutas condiz com o valor dela');
-											}elseif($item['NOME_EXERC'] == 'exercicio_soma'){
-												echo(' Some a terceira coluna na vertical, e você obterá o resultado desejado.');
+											}elseif($item['NOME_EXERC'] == 'exercicio_caixa'){
+												echo(' Coloque os itens em ordem nas caixas isso ajudara o heroi a localizar seus itens.');
+											}elseif($item['NOME_EXERC'] == 'exercicio_gato'){
+												echo(' Ajude o gato a descer da arvore utilizando algo seguro e pratico.');
+											}elseif($item['NOME_EXERC'] == 'exercicio_ache_meio'){
+												echo('Encontre a união entre os elementos e a interseção entre eles, ANALISE BEM AS IMAGENS.');
 											}
-											
 											?></p>
                                 	    </div>
                                 	 </div>
 									</td>  
 								  
-								<?php
-									}elseif($item['modulo'] = 2){
-								?>
-									<td  >
-										<div class="card" style="width: 15rem;">
-                                	    <a href="<?php echo $item['NOME_EXERC']; ?>.php" style="border: 1px solid black"><img class="card-img-top" src="../img/<?php echo $item['NOME_EXERC']; ?>.gif" alt="Card image cap"></a>
-                                	    <div class="card-body">
-                                	        <h5 class="card-title"><?php echo $item['NOME_EXERC']; ?></h5>
-                                	        <p style="font-size: 20px" class="card-text"><?php if($item['NOME_EXERC'] == 'exercicio_soma_divertida') { 
-												echo(' A soma em vertical deve estar correta, porem a soma horizontal também deve coencidir ');
-												
-											}elseif($item['NOME_EXERC'] == 'exercicio_gato'){
-												echo(' Some a terceira coluna na vertical, e você obterá o resultado desejado.');
-											}elseif($item['NOME_EXERC'] == 'exercicio_fruta'){
-												echo('Fique atento aos sinais de mais e menos, a soma das frutas condiz com o valor dela');
-											}elseif($item['NOME_EXERC'] == 'exercicio_soma'){
-												echo(' Some a terceira coluna na vertical, e você obterá o resultado desejado.');
-											}
-											
-											?></p>
+				
                                 	    </div>
                                 	 </div>
 								</td>    
