@@ -9,12 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/exercicioIf.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/dialogo.css">
+    <script src="../js/dialogo_inicio.js" defer></script>
     
     <title>Aprendendo com escolhas</title>
 </head>
 <body>
     <div  class="img">
-             
+        <div id="myModal" class="modal2">
+                        <!-- Modal content -->
+                        <div class="modal-content2">
+                          <span class="close2">&times;</span>
+                          <img  src="../img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                          <p class="p1"> Demonstre agora que você está pronto para se tornar um verdadeiro heroi, e ajude o gatinho a descer da melhor maneira possivel.</p><br>
+                        
+                        </div>
+
+                    </div>         
+
+
         <div class="container">
             
            

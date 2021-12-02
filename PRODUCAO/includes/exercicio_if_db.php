@@ -18,9 +18,9 @@
 
     if ($nota >= '6'){
     	if( $query  ){
-		    header('Location: ../views/md1_exec1_caixa.php');
+		    header('Location: ../views/exercicio_caixa.php');
 	    }else{
-            header('Location: ../views/md1_exec1_caixa.php?erro');		
+            header('Location: ../views/Exercicio_if.php?erro');		
 	    }
     }else{
         header('Location: ../views/Exercicio_if.php?erro');	
